@@ -4,6 +4,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  font-size: 14px;
 }
 
 .hero img {
@@ -16,11 +17,14 @@ body {
   height: 150px;
 }
 
-.header, .hero {
+.header, 
+.hero {
   background-color: #1f2937;
 }
 
-.header, .hero, button {
+.header, 
+.hero, 
+button {
   color: #F9FAF8;
 }
 
@@ -56,16 +60,18 @@ a {
   margin-bottom: 8px;
 }
 
-#hero-main {
-  font-size: 24px;
+.hero-main,
+.title,
+.quote.name {
   font-weight: 800;
 }
 
-#hero-secondary, a, button, .body .categories {
-  font-size: 14px;
-  
+.hero-main {
+  font-size: 24px;
 }
-#hero-secondary, a {
+
+.hero-sidekick, 
+a {
   color: #e5e7eb;
 }
 
@@ -92,9 +98,9 @@ button {
   gap: 20px;
 }
 
-.title {
+.title, 
+.quote.msg {
   font-size: 20px;
-  font-weight: 800;
   color: #1f2937;
 }
 
@@ -107,4 +113,16 @@ button {
 .body img {
   border-radius: 8px;
   border: 2px solid #3882f6;
+}
+
+.quote {
+  background-color: #e5e7eb;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.quote.name {
+  font-style: normal;
+  display: flex;
+  justify-content: flex-end;
 }
