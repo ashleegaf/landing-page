@@ -24,17 +24,20 @@ body {
 
 .header, 
 .hero, 
-button {
+button,
+.contact {
   color: #F9FAF8;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid #F9FAF8;
 }
 
-.logo {
-  font-size: 18px;
+.logo,
+.contact .intro {
+  font-size: 16px;
 }
 
 ul {
@@ -62,7 +65,8 @@ a {
 
 .hero-main,
 .title,
-.quote.name {
+.quote.name,
+.contact .intro {
   font-weight: 800;
 }
 
@@ -79,15 +83,12 @@ button {
   background-color: #3882f6;
   padding: 8px 16px;
   border-radius: 8px;
+  font-weight: 600;
 }
 
 .hero button {
   border: 1px solid #3882f6;
   margin-top: 8px;
-}
-
-.contact button {
-  border: 1px solid white;
 }
 
 .body {
@@ -125,4 +126,17 @@ button {
   font-style: normal;
   display: flex;
   justify-content: flex-end;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3882f6;
+  border: 2px solid #3882f6;
+  border-radius: 8px;
+}
+
+.contact button {
+  border: 1px solid white;
 }
