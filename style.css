@@ -1,6 +1,6 @@
 body {
   font-family: Roboto, 'Open Sans', sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -8,8 +8,9 @@ body {
 }
 
 .hero img {
-  width: 300px;
+  width: 350px;
   height: 200px;
+  border-radius: 8px;
 }
 
 .categories img {
@@ -18,21 +19,26 @@ body {
 }
 
 .header, 
-.hero {
+.hero,
+.footer {
   background-color: #1f2937;
 }
 
 .header, 
 .hero, 
 button,
-.contact {
+.contact .intro,
+.footer {
   color: #F9FAF8;
 }
 
 .header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #F9FAF8;
+  padding: 8px 32px;
+  height: 48px;
 }
 
 .logo,
@@ -52,10 +58,17 @@ a {
   text-decoration: none;
 }
 
+.body {
+  flex: auto;
+}
+
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 32px 300px;
+  height: 250px;
+  flex: auto;
 }
 
 .hero-msg {
@@ -65,7 +78,7 @@ a {
 
 .hero-main,
 .title,
-.quote.name,
+.quote-name,
 .contact .intro {
   font-weight: 800;
 }
@@ -75,7 +88,8 @@ a {
 }
 
 .hero-sidekick, 
-a {
+a,
+.contact .action {
   color: #e5e7eb;
 }
 
@@ -91,27 +105,36 @@ button {
   margin-top: 8px;
 }
 
-.body {
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+}
+
+.needs {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  height: 250px;
 }
 
 .title, 
-.quote.msg {
+.quote-msg {
   font-size: 20px;
   color: #1f2937;
 }
 
-.body .categories {
+.needs .categories {
   display: flex;
-  gap: 16px;
+  gap: 40px;
   text-align: center;
 }
 
-.body img {
+.needs img {
   border-radius: 8px;
   border: 2px solid #3882f6;
 }
@@ -120,9 +143,20 @@ button {
   background-color: #e5e7eb;
   font-style: italic;
   font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
-.quote.name {
+.quote-msg,
+.quote-name {
+  width: 700px;
+}
+
+.quote-name {
   font-style: normal;
   display: flex;
   justify-content: flex-end;
@@ -130,13 +164,29 @@ button {
 
 .contact {
   display: flex;
+  justify-content: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.contact-box {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: #3882f6;
   border: 2px solid #3882f6;
   border-radius: 8px;
+  padding: 24px;
+  width: 700px;
 }
 
 .contact button {
   border: 1px solid white;
+}
+
+.footer {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
